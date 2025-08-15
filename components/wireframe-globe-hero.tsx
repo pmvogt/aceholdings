@@ -118,14 +118,14 @@ export function WireframeGlobeHero() {
   }, []);
 
   return (
-    <section className="py-16 flex bg-gradient-to-br justify-center from-brand-manila to-brand-manila/80">
+    <section className="pt-2 pb-0 flex bg-gradient-to-br justify-center from-brand-manila to-brand-manila/80">
       <div className="container mx-auto px-4 text-center">
-        <div className="mx-auto  bg-[radial-gradient(#c1ad8f_1px,transparent_1px)] [background-size:8px_8px]">
+        <div className="mx-auto bg-[radial-gradient(#c1ad8f_1px,transparent_1px)] [background-size:8px_8px]">
           {/* Three.js Globe with SVG Lightning Overlay and Ace Image */}
           <div className="flex justify-center items-center relative">
             {/* Large Header Text positioned behind everything */}
-            <div className="absolute inset-0 flex justify-center mt-12 z-0">
-              <h1 className={`text-6xl md:text-8xl lg:text-9xl text-gray-600 select-none ${mrDafoe.className}`}>
+            <div className="absolute inset-0 flex justify-center mt-10 z-0">
+              <h1 className={`text-6xl md:text-7xl xl:text-9xl text-gray-600 select-none ${mrDafoe.className}`}>
                 &ldquo;Electrifying the planet!&rdquo;
               </h1>
             </div>

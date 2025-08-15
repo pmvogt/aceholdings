@@ -6,10 +6,11 @@ interface BusinessCardProps {
   description: string;
   imageSrc: string;
   imageAlt: string;
+  url?: string;
 }
 
-export function BusinessCard({ title, description, imageSrc, imageAlt }: BusinessCardProps) {
-  return (
+export function BusinessCard({ title, description, imageSrc, imageAlt, url }: BusinessCardProps) {
+  const CardContent = () => (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <div className="relative h-48 w-full">
         <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
@@ -20,4 +21,19 @@ export function BusinessCard({ title, description, imageSrc, imageAlt }: Busines
       </div>
     </div>
   );
+
+  if (url) {
+    return (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block transition-transform duration-300 hover:scale-105"
+      >
+        <CardContent />
+      </a>
+    );
+  }
+
+  return <CardContent />;
 }
